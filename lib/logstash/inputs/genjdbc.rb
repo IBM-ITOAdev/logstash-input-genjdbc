@@ -36,7 +36,7 @@ class LogStash::Inputs::Genjdbc < LogStash::Inputs::Base
   config :jdbcSQLQuery, :validate  => :string, :required => true
   config :jdbcURL, :validate  => :string, :required => false
   config :jdbcTimeField, :validate => :string, :required => false
-  config :jdbcPollInterval, :validate => :string, :required => false
+  config :jdbcPollInterval, :validate => :number, :required => false, :default => 60
   config :jdbcCollectionStartTime, :validate => :string, :required => false
   config :jdbcPStoreFile, :validate => :string, :required => false, :default => "genjdbc.pstore"
 
@@ -213,8 +213,8 @@ class LogStash::Inputs::Genjdbc < LogStash::Inputs::Base
       stmt.close
       
       # Now need to sleep for interval
-      @logger.info("Sleeping for ", :interval_seconds => "#{@jdbcPollInterval.to_i}")
-      sleep(@jdbcPollInterval.to_i)
+      @logger.info("Sleeping for ", :interval_seconds => "#{@jdbcPollInterval}")
+      sleep(@jdbcPollInterval)
       # zzzzzZZZZ
       
     end # While true (end loop)
