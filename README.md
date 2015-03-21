@@ -97,6 +97,58 @@ jdbc user name.  Used to form jdbc url
 <p>
 jdbc password.  Used to form jdbc url
 </p>
+<h4><a name="jdbcSQLQuery">jdbcSQLQuery</a></h4>
+<ul>
+<li> Value type is <a href="http://logstash.net/docs/1.4.2/configuration#string">String</a> </li>
+<li> There is no default value for this item </li>
+</ul>
+<p>
+SQL query to execute   or  the path of a text file which contains the query to execute.  
+</p>
+<p><code>jdbcSQLQuery => "select * from myTable"</code><p>
+In the latter case, prefix the filename with 'file:'   e.g. 
+<p><code>jdbcSQLQuery => "file:/path/to/my/query.txt"</code></p>
+
+<h4><a name="jdbcURL">jdbcURL</a></h4>
+<ul>
+<li> Value type is <a href="http://logstash.net/docs/1.4.2/configuration#string">String</a> </li>
+<li> There is no default value for this item </li>
+</ul>
+<p>
+jdbc URL - explicitly set the jdbc URL string. Overrides all other URL component settings (e.g jdbcHost, jdbcPort)
+</p>
+<h4><a name="jdbcTimeField">jdbcTimeField</a></h4>
+<ul>
+<li> Value type is <a href="http://logstash.net/docs/1.4.2/configuration#string">String</a> </li>
+<li> There is no default value for this item </li>
+</ul>
+<p>
+TBC
+</p>
+<h4><a name="jdbcPollInterval">jdbcPollInterval</a></h4>
+<ul>
+<li> Value type is <a href="http://logstash.net/docs/1.4.2/configuration#Number">Number</a> </li>
+<li> There is no default value for this item </li>
+</ul>
+<p>
+TBC
+</p>
+<h4><a name="jdbcCollectionStartTime">jdbcCollectionStartTime</a></h4>
+<ul>
+<li> Value type is <a href="http://logstash.net/docs/1.4.2/configuration#string">String</a> </li>
+<li> There is no default value for this item </li>
+</ul>
+<p>
+TBC
+</p>
+<h4><a name="jdbcPStoreFile">jdbcPStoreFile</a></h4>
+<ul>
+<li> Value type is <a href="http://logstash.net/docs/1.4.2/configuration#string">String</a> </li>
+<li> There is no default value for this item </li>
+</ul>
+<p>
+TBC
+</p>
 <hr>
 </div>
 <div class="clear">
