@@ -16,7 +16,7 @@
 Connects to datasources using JDBC driver, executes a select query and for each record returned, emits an event.  
 <p>
 <pre><code>input {
-  scafile {
+  genjdbc {
     <a href="#jdbcHost">jdbcHost</a> => ... # string (required)
     <a href="#jdbcPort">jdbcPort</a> => ... # string (required)
     <a href="#jdbcDBName">jdbcDBName</a> => ... # string (required)
