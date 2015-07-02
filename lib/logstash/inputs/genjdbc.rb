@@ -1,5 +1,4 @@
-# Genjdbc v0.1
-# Date 06 February 2015 09:00:00 GMT
+# Date 06 July 2015 09:00:00 GMT
 # Logstash Generic JDBC Input PlugIn
 # Authors: Stuart Tuck & Rob McKeown
 #
@@ -21,7 +20,6 @@ require "pstore"
 #
 class LogStash::Inputs::Genjdbc < LogStash::Inputs::Base
   config_name "genjdbc"
-  milestone 1
 
   default :codec, "plain"
 
