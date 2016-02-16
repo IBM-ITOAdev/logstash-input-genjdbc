@@ -13,7 +13,9 @@
 <h2>genjdbc</h2>
 <h3>Milestone: <a href="http://logstash.net/docs/1.4.2/plugin-milestones">1</a></h3>
 <h3> Synopsis </h3>
-Connects to datasources using JDBC driver, executes a select query and for each record returned, emits an event.  
+<p>
+Connects to datasources using JDBC driver, executes a select query and for each record returned, emits an event. 
+<p>Note: You may want to consider using the newer <a href="https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html">jdbc plugin</a>
 <p>
 <pre><code>input {
   genjdbc {
